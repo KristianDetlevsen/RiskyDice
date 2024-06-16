@@ -74,7 +74,6 @@ namespace BarRøv
             }
 
             scoreboard.VisScoreboard(spillere);
-            Console.WriteLine("---");
             scoreboard.FindVinder(spillere);
         }
     }
