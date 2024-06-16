@@ -36,19 +36,37 @@ namespace BarRøv
         public void FindVinder(List<Spiller> spillere)
         {
             int højScore = 0;
-            string vinder = "";
-            int nummer = 0;
+            List<Spiller> vindere = new List<Spiller>();
             
             foreach (Spiller spiller in spillere)
             {
                 if (spiller.Point > højScore)
                 {
                     højScore = spiller.Point;
-                    vinder = spiller.Navn;
-                    nummer = spiller.Nummer;
-                }                 
+                    vindere.Clear();
+                    vindere.Add(spiller);
+                }
+                else if (spiller.Point == højScore)
+                {
+                    vindere.Add(spiller);
+                }
             }
-            Console.WriteLine($"Vinderen blev: Spiller{nummer} - {vinder} med {højScore} point - tillykke!");
+
+            if (vindere.Count == 1)
+            {
+                var vinder = vindere[0];
+                Console.WriteLine($"Vinderen blev: Spiller{vinder.Nummer} - {vinder.Navn} med {højScore} point - tillykke!");
+            }
+            else
+            {
+                Console.Write("Der er flere vindere: ");
+                foreach (var vinder in vindere)
+                {
+                    Console.Write($"Spiller{vinder.Nummer} - {vinder.Navn}, ");
+                }
+                Console.WriteLine($"alle med {højScore} point - tillykke!");
+            }
+            
         }
     }
 }
