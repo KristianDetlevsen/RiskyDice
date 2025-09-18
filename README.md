@@ -1,6 +1,7 @@
 # RiskyDice 🎲
 
 > Dette projekt blev udviklet som et hyggeprojekt i sommeren 2024.
+> Opdateret kort i september 2025 med nyt navn og README.
 
 Dette er et lille hyggeprojekt, hvor jeg har udviklet en konsolapplikation i C#.  
 Her kan to eller flere spillere dyste i terningespillet “Bar røv” – her kaldt "Risky Dice".  
