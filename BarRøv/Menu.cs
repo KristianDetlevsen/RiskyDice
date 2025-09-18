@@ -17,7 +17,7 @@ namespace BarRøv
             bool exitAntal = false;
             bool exitMål = false;
 
-            Console.WriteLine("Velkommen til Bar røv! Tryk enter for at starte!");
+            Console.WriteLine("Velkommen til Bar røv (Risky Dice)! Tryk enter for at starte!");
             Console.ReadLine();
             Console.Clear();
 
